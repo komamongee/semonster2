@@ -13,5 +13,6 @@ public class SeMonsterGame {
 
   void draw(String playerName) {
     Player player = map.get(playerName);
+    player.toString();
   }
 }
