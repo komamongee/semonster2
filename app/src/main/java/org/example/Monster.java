@@ -8,12 +8,24 @@ public class Monster {
 
   Monster() {
     Random random = new Random();
-    this.name = this.summonMonster(random.nextInt(5));
+    // this.name = this.summonMonster(random.nextInt(5));
     this.rare = random.nextInt(5);
+    if (this.rare<3) {
+      this.name = this.summonMonster(random.nextInt(5));
+    }
+    else{
+      this.name = this.summonMonster2(random.nextInt(5));
+
+    }
   }
 
   String summonMonster(int mnumber) {
     String monsters[] = { "スライム", "サハギン", "ドラゴン", "デュラハン", "シーサーペント" };
+    return monsters[mnumber];
+  }
+
+  String summonMonster2(int mnumber) {
+    String monsters[] = { "キングスライム", "アビスウォーカー", "エンシェントドラゴン", "デスロード", "リヴァイアサン" };
     return monsters[mnumber];
   }
 
