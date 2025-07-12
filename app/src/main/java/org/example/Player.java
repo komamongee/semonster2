@@ -6,8 +6,8 @@ import java.util.ArrayList;
  * プレイヤーは名前とモンスターデッキ（8体）を持つ
  */
 public class Player {
-    private String name;
-    private ArrayList<Monster> deck;
+    String name;
+    ArrayList<Monster> deck;
 
     public Player(String name) {
         this.name = name;
@@ -34,9 +34,9 @@ public class Player {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(name).append("\n");
+        sb.append("Deck:").append(name).append("\n");
         for (Monster m : deck) {
-            sb.append("→ ").append(m.toString()).append("\n");
+            sb.append(m.toString()).append("\n");
         }
         return sb.toString();
     }
