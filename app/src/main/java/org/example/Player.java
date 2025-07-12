@@ -1,16 +1,20 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * プレイヤーは名前とモンスターデッキ（8体）を持つ
  */
 public class Player {
     String name;
+    int hp;
     ArrayList<Monster> deck;
 
     public Player(String name) {
+        Random random = new Random();
         this.name = name;
+        this.hp = random.nextInt(5) + 5;
         this.deck = new ArrayList<>();
         drawMonsters();
     }
