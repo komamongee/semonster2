@@ -40,7 +40,7 @@ public class Player {
         StringBuilder sb = new StringBuilder();
         sb.append("Deck:").append(name).append("\n");
         for (Monster m : deck) {
-            sb.append(m.toString()).append("\n");
+            sb.append(m.toString() + " HP[" + this.hp + "]").append("\n");
         }
         return sb.toString();
     }
