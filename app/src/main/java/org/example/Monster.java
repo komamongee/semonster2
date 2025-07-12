@@ -10,13 +10,16 @@ public class Monster {
     Random random = new Random();
     // this.name = this.summonMonster(random.nextInt(5));
     this.rare = random.nextInt(5);
-    if (this.rare<3) {
+    if (this.rare < 3) {
       this.name = this.summonMonster(random.nextInt(5));
-    }
-    else{
+    } else {
       this.name = this.summonMonster2(random.nextInt(5));
-
     }
+  }
+
+  Monster(String name, int rare) {
+    this.name=name;
+    this.rare = rare;
   }
 
   String summonMonster(int mnumber) {
