@@ -39,15 +39,15 @@ public class PlayerTest {
     Monster m8 = new Monster("キングスライム", 3);
     player.deck.add(m8);
 
-    String expectedString = "Deck:user\n" +
-        "スライム:レア度[0] HP[7]\n" +
-        "サハギン:レア度[1] HP[7]\n" +
-        "ドラゴン:レア度[2] HP[7]\n" +
-        "デスロード:レア度[3] HP[7]\n" +
-        "リヴァイアサン:レア度[4] HP[7]\n" +
-        "ドラゴン:レア度[1] HP[7]\n" +
-        "ドラゴン:レア度[2] HP[7]\n" +
-        "キングスライム:レア度[3] HP[7]\n";
+    String expectedString = "Deck:user HP[7]\n" +
+        "スライム:レア度[0]\n" +
+        "サハギン:レア度[1]\n" +
+        "ドラゴン:レア度[2]\n" +
+        "デスロード:レア度[3]\n" +
+        "リヴァイアサン:レア度[4]\n" +
+        "ドラゴン:レア度[1]\n" +
+        "ドラゴン:レア度[2]\n" +
+        "キングスライム:レア度[3]\n";
 
     String actualString = player.toString();
 
