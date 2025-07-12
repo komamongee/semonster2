@@ -20,6 +20,7 @@ public class PlayerTest {
   @Test
   public void testToStringFormat() {
     Player player = new Player("user");
+    player.hp = 7;
     player.deck.clear();
     Monster m1 = new Monster("スライム", 0);
     player.deck.add(m1);
@@ -38,9 +39,7 @@ public class PlayerTest {
     Monster m8 = new Monster("キングスライム", 3);
     player.deck.add(m8);
 
-    String actualString = player.toString();
-
-    String expectedString = "Deck:user\n" +
+    String expectedString = "Deck:user HP[7]\n" +
         "スライム:レア度[0]\n" +
         "サハギン:レア度[1]\n" +
         "ドラゴン:レア度[2]\n" +
@@ -49,6 +48,8 @@ public class PlayerTest {
         "ドラゴン:レア度[1]\n" +
         "ドラゴン:レア度[2]\n" +
         "キングスライム:レア度[3]\n";
+
+    String actualString = player.toString();
 
     assertEquals(expectedString, actualString);
   }
